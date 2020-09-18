@@ -18,7 +18,9 @@ describe Grades do
 
   describe 'gradeResult' do
     it 'Takes a hash of results and returns them as string' do
-      result = {"Amber"=>1, "Green"=>3, "Red"=>1}
+      grades = "Green, Green, Amber, Red, Green"
+      gradeArr = subject.input(grades)
+      result = subject.gradeCount(gradeArr)
       expect(subject.gradeResult(result)).to eq("Amber: 1\nGreen: 3\nRed: 1")
       
     end
